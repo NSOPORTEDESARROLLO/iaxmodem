@@ -1,0 +1,20 @@
+#!/bin/bash
+
+
+if [ "$CONF" = "" ];then
+        CONFFILE="iaxmodem-cfg.ttyIAX"
+        DATA=$(ls -A /etc/iaxmodem)
+        if [ "$DATA" = "" ];then
+                cp -f /opt/iaxmodem/samples/iaxmodem-cfg.ttyIAX /etc/iaxmodem/
+        fi 
+
+else 
+        CONFFILE=$CONF
+        if [ ! -f /etc/iaxmodem/$CONF ];then
+                echo "ERROR: No encuentro el archivo $CONF"
+                exit 1  
+        fi
+
+fi
+
+exec /opt/iaxmodem/bin/iaxmodem $CONFFILE
