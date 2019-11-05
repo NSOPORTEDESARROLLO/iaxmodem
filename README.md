@@ -2,6 +2,7 @@
 
 Este docker contiene el Iaxmodem. Si se necesita mas de un modem se debe ejecutar contenedores por separado especificando el archivo de configuracion mediante la vaariable "CONF"
 
+Se debe ejecutar con el parametro --privileged para que pueda crear el dispositivo en /dev/
 
 ## Volumenes:
 
@@ -13,7 +14,8 @@ Este docker contiene el Iaxmodem. Si se necesita mas de un modem se debe ejecuta
 * CONF: Indique el nombre del archivo de configuracion, si no se especifica alguno entonces se creara uno por defecto llamado: iaxmodem-cfg.ttyIAX
 
 
-## Archivo de configuracion de Eejemplo:
+
+## Archivo de configuracion de Ejemplo:
 
 device		/dev/ttyIAX <br>
 owner		uucp:uucp <br>
