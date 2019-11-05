@@ -15,15 +15,15 @@ Este docker contiene el Iaxmodem. Si se necesita mas de un modem se debe ejecuta
 
 ## Archivo de configuracion de Eejemplo:
 
-device		/dev/ttyIAX
-owner		uucp:uucp
-mode		660
-port		4570
-refresh		300
-server		127.0.0.1
-peername	iaxmodem
-secret		password
-cidname		John Doe
-cidnumber	8005551212
-codec		slinear
+device		/dev/ttyIAX <br>
+owner		uucp:uucp <br>
+mode		660 <br>
+port		4570 <br>
+refresh		300 <br>
+server		127.0.0.1 <br>
+peername	iaxmodem <br>
+secret		password <br>
+cidname		John Doe <br>
+cidnumber	8005551212 <br>
+codec		slinear <br>
 
